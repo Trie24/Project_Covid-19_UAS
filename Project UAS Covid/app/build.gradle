@@ -1,0 +1,86 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId "com.tripurwanto.covid19app"
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    // ViewModel
+    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.2.0'
+    // LiveData
+    implementation 'androidx.lifecycle:lifecycle-livedata:2.2.0'
+    implementation 'android.arch.lifecycle:viewmodel:1.1.1'
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    //noinspection LifecycleAnnotationProcessorWithJava8
+    annotationProcessor 'android.arch.lifecycle:compiler:1.1.1'
+    //GSON Converter
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    //Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    //RecyvlerView
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    //adding recycleview
+    implementation 'com.android.support:recyclerview-v7:29.0.0'
+    //CardView
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.android.support:cardview-v7:29.0.0'
+    //MaterialDesign
+    implementation 'com.google.android.material:material:1.1.0'
+    //Preference
+    implementation 'androidx.preference:preference:1.1.1'
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    //MPChart
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    //google maps
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    //design for tab view
+    implementation 'com.android.support:design:29.0.0'
+    //adding shimmer
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+    //slide up panel
+    implementation 'com.sothree.slidinguppanel:library:3.4.0'
+    //parallax
+    implementation 'com.github.nirhart:ParallaxScroll:dd53d1f9d1'
+    //butter knife
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+    //timber
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+
+}
